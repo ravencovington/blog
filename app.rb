@@ -3,9 +3,9 @@ require 'sinatra'
 require 'slim'
 
 get '/' do
-  'Hello World!'
+  slim :blog_index
 end
 
-get '/test' do
-  slim :test_page
+get '/first-post' do
+  slim 'posts/n_001'.to_sym
 end
