@@ -1,13 +1,14 @@
 #blog/app.rb 
 require 'sinatra'
+  
   get '/' do
-    @active = 'portfolio'
-    erb :portfolio
-  end
-
-  get '/blog' do
     @active = 'blog'
     erb :blog
+  end
+  
+  get '/portfolio' do
+    @active = 'portfolio'
+    erb :portfolio
   end
 
   get '/contact' do
