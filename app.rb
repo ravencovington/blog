@@ -1,11 +1,21 @@
 #blog/app.rb 
 require 'sinatra'
-require 'slim'
+  get '/' do
+    erb :blog
+  end
 
-get '/' do
-  slim :blog_index
-end
+  get '/posts' do
+    erb :posts
 
-get '/first-post' do
-  slim 'posts/n_001'.to_sym
+  get '/contact' do
+    erb :contact
+  end
+
+  get '/portfolio' do
+    erb :portfolio
+  end
+
+  get '/about' do 
+    erb :about
+  end
 end
