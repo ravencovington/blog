@@ -1,0 +1,69 @@
+<div class="container">
+  <div class="row">
+
+    <!-- Blog Entries Column -->
+    <div class="col-md-8">
+
+    <!-- Fourth Blog Post -->
+      
+      <h2>
+        Know Your Tools, Know Their Worth
+      </h2>
+      <p class="lead">
+        by <a href="index.php">Raven</a>
+      </p>
+      <p><span class="glyphicon glyphicon-time"></span> Posted on August 12, 2015 at 12:10 AM</p>
+      <hr>
+      
+      <hr>
+      <p>
+      Let's start this blog post by getting the important stuff out of the way first. Yes this blog title was inspired by Drake's "Know Yourself" because why wouldn't it? You should probably crank up "Know Yourself" in your preferred streaming app for an optimal reading session. Anyways, I wanted to talk bit about how helpful knowing your tools can be when you're new to software development. Once you get a basic understanding of version control and how to use Git, it's incredibly helpful to learn how to not let Git slow you down. The first step to that is creating some awesome Git aliases. Git aliases are just shorthand for often used git commands. It helps you speed up your development time and become more efficient. Instead of trying to remember if it's `git commit --verbose` or `git commit -verbose`, you can just type `gco` and keep it moving.
+      </p>
+
+      <p>
+      So let's go step by step of how you'd actually set up these aliases.
+
+      Step 1: From your terminal, cd to your home directory (`$ cd ~`). Open your .gitconfig file just as you'd open any other Ruby file. If for some reason you don't have a .gitconfig file, you can always create one with the command `$ touch .gitconfig`.
+
+      Step 2: Copy and paste this bit into the bottom of your .gitconfig file.
+
+      [alias]
+        # Colorful git log of all branches
+        gl = log --graph --all --branches --decorate --pretty=format:'[%C(auto)%h%Creset][%C(cyan)%an %ar%Creset]%C(auto)%d%Creset %s %C(auto)%Creset'
+        
+        # Lists of all commits on branch
+        ls = log --stat --all --decorate
+        
+        s = status
+        
+        # Opens your editor so you can include a longer commit msg
+        cm = commit --verbose
+        
+        co = checkout
+        
+        b  = branch
+        
+        cp = cherry-pick
+        
+        d = diff
+        
+        dc = diff --cached
+        
+        a = add
+      </p>
+      
+      <p>  
+      That was so easy! Just two steps and now you have some pretty useful git aliases set up. Just know that these are my shortcuts that I feel comfortable with. If you're prefer the alias for branch to be `br` instead of `b`, go for it. You can add other git commands and all of them follow this same pattern.
+      </p>
+
+      <p>
+      Now to use these aliases, all you have to do is type `git` before the alias and the commands work exactly as if you'd typed them out long hand.
+      </p>
+
+      <p>
+      **This post is about Git-- if you're not familiar with it yet, try out http://jlord.us/git-it/. I've heard great things.
+      </p>
+    </hr>
+    </div>
+  </div>
+</div>
