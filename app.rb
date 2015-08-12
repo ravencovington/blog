@@ -20,6 +20,10 @@ require 'sinatra'
     erb :about
   end
 
+  get '/know-your-tools' do
+    erb 'posts/n_004'.to_sym
+  end
+
   get '/i-started-a-book-club' do
     erb 'posts/n_003'.to_sym
   end
